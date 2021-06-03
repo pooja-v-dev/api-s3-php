@@ -1,4 +1,14 @@
 <?php
+if(!isset($_POST['s3bucket']) || empty($_POST['s3bucket'])){
+    echo "Please enter the s3bucket";
+    exit;
+}
+
+
+if(!isset($_FILES['filename']) || empty($_FILES['filename'])){
+    echo "Please select file";
+    exit;
+}
 
 $bucketName = $_POST['s3bucket'];
 $file = $_FILES['filename'];
